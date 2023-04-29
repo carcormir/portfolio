@@ -1,11 +1,11 @@
 import NavBar from '@/components/NavBar'
 import Image from 'next/image'
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <main className=''>
-        Home
+        About
       </main>
     </>
   )
