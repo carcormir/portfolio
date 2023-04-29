@@ -2,7 +2,10 @@ import Link from "next/link";
 import Logo from '@/components/Logo'
 import { LinkedinIcon, GithubIcon } from '@/components/Icons'
 import { useRouter } from "next/router";
+import { motion } from 'framer-motion'
 
+const GITHUB_URL = 'https://github.com/carcormir'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/carcormir/'
 
 function CustomLink ({href, title, className=`${className}`}) {
   const router = useRouter()
@@ -31,18 +34,42 @@ function CustomLink ({href, title, className=`${className}`}) {
 
 export default function NavBar () {
   return (
-    <header className='w-full px-32 py-8 font-medium flex items-center justify-between '>
+    <header className='w-full px-32 py-8 font-medium flex items-center justify-between bg-blue-300'>
       <nav>
         <CustomLink href='/' title='Home' className='mr-4'/>
         <CustomLink href='/about' title='About' className='mx-4'/>
         <CustomLink href='/projects' title='Projects' className='ml-4'/>
       </nav>
-      <nav className="flex gap-4">
-        <Link href='/' target={'_blank'}><GithubIcon/></Link>
-        <Link href='/' target={'_blank'}><LinkedinIcon/> </Link>
+      <nav className="flex items-center justify-center flex-wrap">
+        <motion.a 
+          href={GITHUB_URL} 
+          target={'_blank'}
+          className='w-6 mx-3'
+          whileHover={{
+            translateY: -5,
+          }}
+          whileTap={{
+            scale: 0.9
+          }}
+          >
+          <GithubIcon/>
+        </motion.a>
+        <motion.a 
+          href={LINKEDIN_URL} 
+          target={'_blank'}
+          className='w-6 ml-3'
+          whileHover={{
+            translateY: -5,
+          }}
+          whileTap={{
+            scale: 0.9
+          }}
+          >
+          <LinkedinIcon/> 
+        </motion.a>
       </nav>
 
-      <div className="absolute left-[50%] top-2 translate-x-[-50%]">
+      <div className="absolute left-[50%] top-3 translate-x-[-50%]">
         <Logo />
       </div>
     </header>
