@@ -1,11 +1,44 @@
-import NavBar from '@/components/NavBar'
 import Image from 'next/image'
+import Link from 'next/link'
+import NavBar from '@/components/NavBar'
+import Layout from '@/components/Layout'
+import AnimatedText from '@/components/AnimatedText'
+import profilePic from '@/public/images/profile/developer-pic-1.png'
 
 export default function Home() {
   return (
     <>
-      <main className=''>
-        Home
+      <main className='flex items-center text-dark w-full min-h-screen '>
+        <Layout className='pt-0'>
+          <div className='flex items-center justify-between w-full'>
+            <div className='w-1/2 flex flex-col items-center self-center'>
+              <AnimatedText text={'Hi, I am Carlos'} className='!text-6xl text-left'/>
+              <p className='my-4 text-base font-medium'>
+                Aiming to help create something special and unique through technology by being passionate, 
+                creative and having a huge determination. It is never too late to make a difference. 
+                Open for new exciting opportunities as a FrontEnd Developer.
+              </p>
+              <div className='flex items-center self-start'>
+                <Link href='/dummy.pdf' target={'_blank'} 
+                      className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
+                     border-2 border-solid border-transparent hover:bg-light hover:text-dark hover:border-dark'
+                     download={true}
+                     >
+                  Resume
+                </Link>
+                <Link href='mailto:carcormir@gmail.com' target={'_blank'}
+                    className='ml-4 bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
+                    border-2 border-solid border-transparent hover:bg-light hover:text-dark hover:border-dark'
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+            <div className='w-1/2'>
+              <Image src={profilePic} alt='carcormir' className='w-full h-auto' />
+            </div>
+          </div>
+        </Layout>
       </main>
     </>
   )
