@@ -69,7 +69,7 @@ export default function NavBar () {
         </motion.a>
       </nav>
 
-      <div className="absolute left-[50%] top-3 translate-x-[-50%]">
+      <div className="absolute left-[50%] top-5 translate-x-[-50%]">
         <Logo />
       </div>
     </header>
