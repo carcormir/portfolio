@@ -4,10 +4,12 @@ import NavBar from '@/components/NavBar'
 import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
 import profilePic from '@/public/images/profile/developer-pic-1.png'
+import TransitionEffect from '@/components/TransitionEffect'
 
 export default function Home() {
   return (
     <>
+      <TransitionEffect />
       <main className='flex items-center text-dark w-full min-h-screen '>
         <Layout className='pt-0'>
           <div className='flex items-center justify-between w-full'>
