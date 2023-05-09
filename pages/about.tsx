@@ -1,6 +1,7 @@
 import AnimatedText from '@/components/AnimatedText'
 import Layout from '@/components/Layout'
 import TransitionEffect from '@/components/TransitionEffect'
+import Skills from '@/components/Skills'
 import Head from 'next/head'
 import Image from 'next/image'
 import profilePic from '@/public/images/profile/developer-pic-2.jpg'
@@ -12,7 +13,7 @@ const AnimatedNumber = ({value}) => {
 
   const motionValue = useMotionValue(0)
   const springValue = useSpring(motionValue, {
-    duration: 3000,
+    duration: 5000,
   })
   const isInVew = useInView(ref, {once: true})
 
@@ -45,7 +46,7 @@ export default function About() {
         <title>About Me</title>
         <meta name="description" content="About Me"/>
       </Head>
-      <main className='flex w-full flex-col items-center justify-center'>
+      <main className='flex w-full h-full flex-col items-center justify-center'>
         <Layout className='pt-16'>
             <AnimatedText text={'About Me'} className='mb-16'/>
           <div className='grid w-full grid-cols-8 gap-16'>
@@ -95,6 +96,7 @@ export default function About() {
               </div>
             </div>
           </div>
+          <Skills />
         </Layout>
       </main>
     </>
