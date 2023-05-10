@@ -1,8 +1,5 @@
-// import { ReactIcon, JsIcon, TypeScriptIcon, CssIcon, HtmlIcon, 
-//           JestIcon, NextJsIcon, GithubIcon, PythonIcon, RobotIcon, TailWindIcon, 
-//           ViteIcon   } from "./Icons"
-
-import { CssIcon, HtmlIcon, JsIcon } from "./Icons"
+import { CssIcon, HtmlIcon, JsIcon, TypeScriptIcon, JestIcon, 
+NextJsIcon, PythonIcon, ReactIcon, TailWindIcon, GithubIcon, ViteIcon, RobotIcon } from "./Icons"
 
 export const skillsData = [
   {
@@ -10,7 +7,7 @@ export const skillsData = [
     list: [
       {
         name: "React",
-        icon: <div></div>//<ReactIcon />
+        icon: <ReactIcon />
       },
       {
         name: "JavaScript",
@@ -18,7 +15,7 @@ export const skillsData = [
       },
       {
         name: "TypeScript",
-        icon: <div></div>//<TypeScriptIcon />
+        icon: <TypeScriptIcon />
       },
       {
         name: "CSS",
@@ -30,19 +27,19 @@ export const skillsData = [
       },
       {
         name: "Next.js",
-        icon: <div></div>//<NextJsIcon />
+        icon: <NextJsIcon />
       },
       {
         name: "Tailwind CSS",
-        icon: <div></div>//<TailWindIcon />
+        icon: <TailWindIcon />
       },
       {
         name: "GitHub",
-        icon: <div></div>//<GithubIcon />
+        icon: <GithubIcon />
       },
       {
         name: "Jest",
-        icon: <div></div>//<JestIcon />
+        icon: <JestIcon />
       },
     ]
   },
@@ -51,15 +48,15 @@ export const skillsData = [
     list: [
       {
         name: "Vite",
-        icon: <div></div>//<ViteIcon />
+        icon: <ViteIcon />
       },
       {
         name: "Python",
-        icon: <div></div>//<PythonIcon />
+        icon: <PythonIcon />
       },
       {
         name: "Robotics",
-        icon: <div></div>//<RobotIcon />
+        icon: <RobotIcon />
       },
     ]
   },
