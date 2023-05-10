@@ -467,9 +467,6 @@ export const RobotIcon = ({ className, ...rest }) => (
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     aria-hidden="true"
-    role="img"
-    class="iconify iconify--twemoji"
-    preserveAspectRatio="xMidYMid meet"
     className={`w-full h-auto ${className}`}
   >
     <ellipse style={{fill: "#F4900C"}} cx="33.5" cy="14.5" rx="2.5" ry="3.5"></ellipse>
