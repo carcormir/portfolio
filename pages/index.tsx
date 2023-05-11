@@ -21,7 +21,7 @@ export default function Home() {
             <div className='w-1/2 flex flex-col items-center self-center'>
               <AnimatedText text={'Frontend Developer'} className='!text-6xl text-left'/>
               <p className='my-4 text-base font-medium'>
-                Hi, I am Carlos. I am very passionate about Frontend development, specially React.js. I am aiming to help create 
+                Hi, I am Carlos. I am very passionate about Frontend development, specially React.js. I am aiming to help you create 
                 something special and unique through technology by being dedicated, 
                 creative and having a huge determination.
               </p>

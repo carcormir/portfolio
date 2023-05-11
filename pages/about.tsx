@@ -59,7 +59,7 @@ export default function About() {
               </p>
               <p className='my-4 font-medium'>
                 Being a Frontend Developer involves much more than just writing code. It is 
-                about understanding the partner's needs and translating them into a product. 
+                about understanding your partner's needs and translating them into a product. 
                 To do that you need to be good at solving complex problems and understanding 
                 what exactly what you are doing.
               </p>
