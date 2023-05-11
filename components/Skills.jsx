@@ -26,7 +26,7 @@ export function CustomTitle({ title, className }) {
   return (
     <div className={`${className} relative group`}>
       {title}
-      <span ref={ref} className="h-[1px] inline-block bg-purple-500/75 absolute left-0 -bottom-0.5">
+      <span ref={ref} className="h-[1px] inline-block bg-purplePastel absolute left-0 -bottom-0.5">
         &nbsp;
       </span>
     </div>
@@ -35,7 +35,7 @@ export function CustomTitle({ title, className }) {
 
 export function SkillCard({ name, icon }) {
   return (
-    <div className="w-auto h-auto flex flex-col items-center justify-center px-5">
+    <div className="w-auto h-auto flex flex-col items-center justify-center px-5 py-3 shadow-purplePastel shadow-md rounded">
       <div className="w-16 h-16 flex items-center justify-center">
         {icon}
       </div>
