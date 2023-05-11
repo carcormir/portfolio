@@ -18,11 +18,6 @@ export default function NavBar () {
         <CustomNavLink href='/about' title='About' className='mx-4 font-semibold'/>
         <CustomNavLink href='/projects' title='Projects' className='ml-4 font-semibold'/>
       </nav>
-      {/* <div className="absolute left-[50%] top-5 translate-x-[-50%]">
-          <Logo />
-        </div> */}
-
-      
     </header>
   )
 }
