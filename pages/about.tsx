@@ -2,6 +2,8 @@ import AnimatedText from '@/components/AnimatedText'
 import Layout from '@/components/Layout'
 import TransitionEffect from '@/components/TransitionEffect'
 import Skills from '@/components/Skills'
+import Experience from '@/components/Experience'
+import Education from '@/components/Education'
 import Head from 'next/head'
 import Image from 'next/image'
 import profilePic from '@/public/images/profile/developer-pic-2.jpg'
@@ -97,6 +99,8 @@ export default function About() {
             </div>
           </div>
           <Skills />
+          <Experience />
+          <Education />
         </Layout>
       </main>
     </>
