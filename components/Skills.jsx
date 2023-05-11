@@ -50,15 +50,15 @@ export default function Skills() {
   return (
       <>
         <h2 className="font-bold text-8xl mt-32 w-full text-center">Skills</h2>
-        <div className="w-full h-screen flex flex-col items-start justify-start">
+        <div className="w-full h-full flex flex-col items-start justify-start">
         {
           SkillsData.map((skill, index) => {
             return (
-              <div key={index} className="w-full h-auto flex flex-col items-start justify-start mt-10">
+              <div key={index} className="w-full h-full flex flex-col items-start justify-start mt-10">
                 <div className='inline-block w-full text-7xl font-bold'>
                   <CustomTitle title={skill.type} className="text-3xl font-bold text-dark/75" />
                 </div>
-                <div className="w-full h-1/2 flex flex-wrap  items-center justify-end gap-5 mt-10">
+                <div className="w-full h-auto flex flex-wrap  items-center justify-end gap-5 mt-10">
                   {
                     skill.list.map((item, index) => {
                       return (<SkillCard key={index} name={item.name} icon={item.icon} />)
