@@ -45,7 +45,7 @@ export default function Home() {
                   <motion.a 
                     href={GITHUB_URL} 
                     target={'_blank'}
-                    className='w-8 mr-3 ml-5'
+                    className="w-12 ml-4"
                     whileHover={{
                       translateY: -5,
                     }}
@@ -58,7 +58,7 @@ export default function Home() {
                   <motion.a 
                     href={LINKEDIN_URL} 
                     target={'_blank'}
-                    className='w-8 ml-2'
+                    className='w-10 ml-4'
                     whileHover={{
                       translateY: -5,
                     }}
