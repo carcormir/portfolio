@@ -73,7 +73,12 @@ export default function Home() {
               </div>
             </div>
             <div className='w-1/2'>
-              <Image src={profilePic} alt='carcormir' className='w-full h-auto' />
+              <Image src={profilePic} alt='carcormir' className='w-full h-auto' 
+                priority
+                sizes='(max-width: 768px) 100vw
+                (max-width: 1024px) 50vw
+                50vw' 
+              />
             </div>
           </div>
         </Layout>

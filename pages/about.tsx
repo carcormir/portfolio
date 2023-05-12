@@ -74,7 +74,12 @@ export default function About() {
             <div className='col-span-3 relative h-max  border-2 border-solid border-dark
             bg-light p-8'>
               <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] bg-dark'  />
-              <Image src={profilePic} className='w-full h-auto' alt='profile-image-corked'/>
+              <Image src={profilePic} className='w-full h-auto' alt='profile-image-corked'
+                priority
+                sizes='(max-width: 768px) 100vw
+                (max-width: 1024px) 50vw
+                33vw' 
+              />
             </div>
 
             <div className='col-span-2 flex flex-col items-end justify-between'>
