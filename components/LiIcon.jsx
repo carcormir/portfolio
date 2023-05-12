@@ -9,13 +9,13 @@ export default function LiIcon ({reference}) {
   )
   return (
     <figure className="absolute left-0 stroke-dark">
-      <svg className="-rotate-90" width="75" height="75" viewBox="0 0 100 100">
-        <circle cx="75" cy="50" r="20" className="stroke-purplePastel stroke-1 fill-none"/>
-        <motion.circle cx="75" cy="50" r="20" 
+      <svg className="" width="75" height="75" viewBox="-50 -50 100 100">
+        <rect x="-20" y="-35" width="40" height="40" className="stroke-purplePastel stroke-[4px] fill-none"/>
+        <motion.rect x="-20" y="-35" width="40" height="40"  
           className="stroke-[5px] fill-light"
           style={{ pathLength: scrollYProgress }}
         />
-        <circle cx="75" cy="50" r="10" className="animate-pulse stroke-1 fill-purplePastel"/>
+        <rect x="-10" y="-25" width="20" height="20" className="animate-pulse stroke-1 fill-purplePastel"/>
       </svg>
     </figure>
   )
