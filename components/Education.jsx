@@ -5,35 +5,27 @@ import LiIcon from '@/components/LiIcon'
 
 const EducationData = [
   {
-    title: 'Software Engineer',
-    university: 'Google',
-    universityLink: 'https://www.google.com',
-    date: '2020 - Present',
-    address: 'Mountain View, CA',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, odio euismod aliquam aliquam, mauris ligula elementum diam, et aliquam nibh nibh vitae purus. Cras in massa in nunc ultricies ultricies. Sed euismod, odio euismod aliquam aliquam, mauris ligula elementum diam, et aliquam nibh nibh vitae purus. Cras in massa in nunc ultricies ultricies.'
+    title: 'MSc Electrical Engineering, Automation and Robot Technology.',
+    university: 'Danmarks Tekniske Universitet',
+    universityLink: 'https://www.dtu.dk/english',
+    date: '2015 - 2017',
+    address: 'Copenhagen, Denmark',
+    description: ''
   },
   {
-    title: 'Software Engineer',
-    university: 'Facebook',
-    universityLink: 'https://www.facebook.com',
-    date: '2018 - 2020',
-    address: 'Menlo Park, CA',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, odio euismod aliquam aliquam, mauris ligula elementum diam, et aliquam nibh nibh vitae purus. Cras in massa in nunc ultricies ultricies. Sed euismod, odio euismod aliquam aliquam, mauris ligula elementum diam, et aliquam nibh nibh vitae purus. Cras in massa in nunc ultricies ultricies.'
-  },
-  {
-    title: 'Software Engineer',
-    university: 'Apple',
-    universityLink: 'https://www.apple.com',
-    date: '2016 - 2018',
-    address: 'Cupertino, CA',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, odio euismod aliquam aliquam, mauris ligula elementum diam, et aliquam nibh nibh vitae purus. Cras in massa in nunc ultricies ultricies. Sed euismod, odio euismod aliquam aliquam, mauris ligula elementum diam, et aliquam nibh nibh vitae purus. Cras in massa in nunc ultricies ultricies.'
-  },
+    title: `Bachelor's degree in Industrial Technology Engineering`,
+    university: 'Universidad de Sevilla',
+    universityLink: 'https://www.etsi.us.es',
+    date: '2010 - 2015',
+    address: 'Seville, Spain',
+    description: ''
+  }
 ]
 
 export function Details ({title, university, universityLink, date, address, description}) {
   const ref = useRef(null)
   return (
-    <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between">
+    <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between">
       <LiIcon reference={ref}/>
       <motion.div
         initial={{ opacity: 0, y: 70 }}
@@ -41,7 +33,9 @@ export function Details ({title, university, universityLink, date, address, desc
         transition={{ duration: 0.5, type: 'tween' }}
       >
         <h3 className="capitalize font-bold text-2xl">
-          {title}&nbsp; - &nbsp; 
+          {title}&nbsp;
+        </h3>
+        <h4 className="capitalize font-bold text-lg"> 
           <a 
             href={universityLink}
             target="_blank"
@@ -49,7 +43,7 @@ export function Details ({title, university, universityLink, date, address, desc
           >
             {university}
           </a> 
-        </h3>
+        </h4>
         <span className="capitalize font-medium text-dark/75">
           {date} &nbsp; {address}
         </span>
@@ -74,9 +68,9 @@ export default function Education() {
   return (
     <div className="mt-32">
         <h2 className="font-bold text-8xl mb-16 w-full text-center">Education</h2>
-        <div ref={ref} className="w-[75%] mx-auto relative">
+        <div ref={ref} className="w-[75%] mx-auto mb-48 relative">
           <motion.div 
-              className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+              className="absolute left-9 top-0 w-[4px] h-[145%] bg-dark origin-top"
               style={{ scaleY: scrollYProgress }}
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4">
