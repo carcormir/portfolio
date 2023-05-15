@@ -40,12 +40,12 @@ export default function NavBar () {
           animate={{scale: 1, opacity: 1, transition: {duration: 0.3}}}
           >
             <nav className="flex flex-col items-center justify-between">
-              <CustomMobileNavLink href="/"itle="Home"lassName="font-semibold"oggle={handleClick}/>
-              <CustomMobileNavLink href="/about"itle="About"className="font-semibold"toggle={handleClick}/>
-              <CustomMobileNavLink href="/projects"itle="Projects"className="font-semibold"toggle={handleClick}/>
+              <CustomMobileNavLink href="/" title="Home" className="font-semibold" toggle={handleClick}/>
+              <CustomMobileNavLink href="/about" title="About" className="font-semibold" toggle={handleClick}/>
+              <CustomMobileNavLink href="/projects" title="Projects" className="font-semibold" toggle={handleClick}/>
             </nav>
 
-            <NavBarSocial classNameGit={"ml-0 mt-4"} classNameLinkedin={"mt-4"}/>
+            <NavBarSocial classNameGit={"ml-2 mt-4"} classNameLinkedin={"mt-4 mx-2"}/>
           </motion.div>
         )
       }

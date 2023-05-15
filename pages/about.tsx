@@ -10,12 +10,12 @@ import profilePic from "@/public/images/profile/developer-pic-2.jpg"
 import { useEffect, useRef } from "react"
 import { useInView, useMotionValue, useSpring } from "framer-motion"
 
-const AnimatedNumber = ({value}) => {
-  const ref = useRef(null)
+const AnimatedNumber = ({value}: {value: number}) => {
+  const ref = useRef<HTMLSpanElement>(null)
 
   const motionValue = useMotionValue(0)
   const springValue = useSpring(motionValue, {
-    duration: 5000,
+    duration: 4000,
   })
   const isInVew = useInView(ref, {once: true})
 
@@ -61,7 +61,7 @@ export default function About() {
               </p>
               <p className="my-4 font-medium">
                 Being a Frontend Developer involves much more than just writing code. It is 
-                about understanding your partner"s needs and translating them into a product. 
+                about understanding your partner&apos;s needs and translating them into a product. 
                 To do that you need to be good at solving complex problems and understanding 
                 what exactly what you are doing.
               </p>
@@ -85,19 +85,19 @@ export default function About() {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:4xl">
-                  <AnimatedNumber value={"4"}/>
+                  <AnimatedNumber value={4}/>
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">years of experience</h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:4xl">
-                <AnimatedNumber value={"14"}/>
+                <AnimatedNumber value={14}/>
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">projects completed</h2>
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:4xl">
-                  <AnimatedNumber value={"1"}/>
+                  <AnimatedNumber value={1}/>
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 xl:text-center md:text-lg sm:text-base xs:text-sm">satisfied partners</h2>
               </div>
