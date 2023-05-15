@@ -1,24 +1,24 @@
 
 import { motion, useScroll } from "framer-motion"
 import { useRef } from "react"
-import LiIcon from '@/components/LiIcon'
+import LiIcon from "@/components/LiIcon"
 
 const EducationData = [
   {
-    title: 'MSc Electrical Engineering, Automation and Robot Technology.',
-    university: 'Danmarks Tekniske Universitet',
-    universityLink: 'https://www.dtu.dk/english',
-    date: '2015 - 2017',
-    address: 'Copenhagen, Denmark',
-    description: ''
+    title: "MSc Electrical Engineering, Automation and Robot Technology.",
+    university: "Danmarks Tekniske Universitet",
+    universityLink: "https://www.dtu.dk/english",
+    date: "2015 - 2017",
+    address: "Copenhagen, Denmark",
+    description: ""
   },
   {
-    title: `Bachelor's degree in Industrial Technology Engineering`,
-    university: 'Universidad de Sevilla',
-    universityLink: 'https://www.etsi.us.es',
-    date: '2010 - 2015',
-    address: 'Seville, Spain',
-    description: ''
+    title: `Bachelor"s degree in Industrial Technology Engineering`,
+    university: "Universidad de Sevilla",
+    universityLink: "https://www.etsi.us.es",
+    date: "2010 - 2015",
+    address: "Seville, Spain",
+    description: ""
   }
 ]
 
@@ -30,7 +30,7 @@ export function Details ({title, university, universityLink, date, address, desc
       <motion.div
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, type: 'tween' }}
+        transition={{ duration: 0.5, type: "tween" }}
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {title}&nbsp;

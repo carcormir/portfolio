@@ -16,7 +16,7 @@ export default function CustomMobileNavLink ({href, title, toggle, className=`${
       <span className={`
         h-[1px] inline-block bg-light 
         absolute left-0 -bottom-0.5 group-hover:w-full trasition-[width] ease duration-300
-        ${router.asPath === href ? 'w-full' : 'w-0'}
+        ${router.asPath === href ? "w-full" : "w-0"}
       `}>
         &nbsp;
       </span>

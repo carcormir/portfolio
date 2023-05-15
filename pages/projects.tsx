@@ -1,10 +1,10 @@
-import NavBar from '@/components/NavBar'
-import Image from 'next/image'
+import NavBar from "@/components/NavBar"
+import Image from "next/image"
 
 export default function Projects() {
   return (
     <>
-      <main className=''>
+      <main className="">
         Projects
       </main>
     </>

@@ -1,6 +1,6 @@
 import { useRef, useEffect } from "react"
 import { useInView, useSpring, useMotionValue } from "framer-motion"
-import { SkillsData } from '@/constants/SkillsData'
+import { SkillsData } from "@/constants/SkillsData"
 
 export function CustomTitle({ title, className }) {
   const ref = useRef(null)
@@ -55,7 +55,7 @@ export default function Skills() {
           SkillsData.map((skill, index) => {
             return (
               <div key={index} className="w-full h-full flex flex-col items-start justify-start mt-10">
-                <div className='inline-block w-full'>
+                <div className="inline-block w-full">
                   <CustomTitle title={skill.type} className="text-3xl font-bold text-dark/75 md:text-2xl xs:text-xl" />
                 </div>
                 <div className="w-full h-auto flex flex-wrap  items-center justify-end gap-5 mt-10 md:justify-center">
