@@ -4,6 +4,7 @@ import CustomNavLink from '@/components/CustomNavLink'
 import CustomMobileNavLink from '@/components/CustomMobileNavLink'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import NavBarSocial from "./NavBarSocial";
 
 
 
@@ -33,14 +34,19 @@ export default function NavBar () {
 
       {
         isOpen && (
-          <div className="min-w-[70vw] flex flex-col items-center justify-end fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30
-          bg-dark/90 text-light/75 rounded-lg backdrop-blur-md py-32">
+          <motion.div className="min-w-[70vw] flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30
+          bg-dark/90 text-light/75 rounded-lg backdrop-blur-md py-32"
+          initial={{scale: 0, opacity: 0, x: '-50%', y: '-50%' }}
+          animate={{scale: 1, opacity: 1, transition: {duration: 0.3}}}
+          >
             <nav className="flex flex-col items-center justify-between">
               <CustomMobileNavLink href='/' title='Home' className='font-semibold' toggle={handleClick}/>
               <CustomMobileNavLink href='/about' title='About' className='font-semibold' toggle={handleClick}/>
               <CustomMobileNavLink href='/projects' title='Projects' className='font-semibold' toggle={handleClick}/>
             </nav>
-          </div>
+
+            <NavBarSocial classNameGit={"ml-0 mt-4"} classNameLinkedin={"mt-4"}/>
+          </motion.div>
         )
       }
       

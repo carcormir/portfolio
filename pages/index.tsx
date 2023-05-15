@@ -1,15 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import NavBarSocial from '@/components/NavBarSocial'
 import Layout from '@/components/Layout'
 import AnimatedText from '@/components/AnimatedText'
 import TransitionEffect from '@/components/TransitionEffect'
-import { LinkedinIcon, GithubIcon } from '@/components/Icons'
 import profilePic from '@/public/images/profile/developer-pic-1.png'
-
-
-const GITHUB_URL = 'https://github.com/carcormir'
-const LINKEDIN_URL = 'https://www.linkedin.com/in/carcormir/'
 
 export default function Home() {
   return (
@@ -41,35 +37,7 @@ export default function Home() {
                     Contact
                   </Link>
                 </div>
-                <nav className="flex items-center justify-center flex-wrap">
-                  <motion.a 
-                    href={GITHUB_URL} 
-                    target={'_blank'}
-                    className="w-12 ml-4"
-                    whileHover={{
-                      translateY: -5,
-                    }}
-                    whileTap={{
-                      scale: 0.9
-                    }}
-                    >
-                    <GithubIcon/>
-                  </motion.a>
-                  <motion.a 
-                    href={LINKEDIN_URL} 
-                    target={'_blank'}
-                    className='w-10 ml-4'
-                    whileHover={{
-                      translateY: -5,
-                    }}
-                    whileTap={{
-                      scale: 0.9
-                    }}
-                    >
-                    <LinkedinIcon/> 
-                  </motion.a>
-        
-                </nav>
+                <NavBarSocial />
               </div>
             </div>
             <div className='w-1/2'>
