@@ -21,7 +21,7 @@ export default function Home() {
                 something special and unique through technology by being dedicated, 
                 creative and having a huge determination.
               </p>
-              <div className='w-full flex items-center lg:justify-center md:flex-col md:justify-center'>
+              <div className='w-full flex items-center lg:justify-center md:flex-col md:justify-center md:mt-6'>
                 <div className='flex items-center self-start md:self-center'>
                   <Link href='/dummy.pdf' target={'_blank'} 
                         className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
