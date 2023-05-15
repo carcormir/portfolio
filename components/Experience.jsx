@@ -60,17 +60,17 @@ const ExperienceData = [
 export function Details ({position, company, companyLink, type, date, address, description}) {
   const ref = useRef(null)
   return (
-    <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between">
+    <li ref={ref} className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-start justify-between md:w-[80%]">
       <LiIcon reference={ref}/>
       <motion.div
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, type: 'tween' }}
       >
-        <h3 className="capitalize font-bold text-2xl">
+        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {position}&nbsp;
         </h3>
-        <h4 className="capitalize font-bold text-lg"> 
+        <h4 className="capitalize font-bold text-lg xs:text-sm"> 
           <a 
             href={companyLink}
             target="_blank"
@@ -78,14 +78,14 @@ export function Details ({position, company, companyLink, type, date, address, d
           >
             {company}
           </a>
-          <span className="font-light text-lg text-dark/75">
+          <span className="font-light text-lg text-dark/75 xs:text-sm">
             &nbsp; &#x2022; &nbsp;{type}
           </span>
         </h4>
-        <span className="capitalize font-light text-dark/75">
+        <span className="capitalize font-light text-dark/75 xs:text-sm">
           {date} &nbsp; &#124; &nbsp; {address}
         </span>
-        <p className="font-medium w-full">
+        <p className="font-medium w-full md:text-sm">
           {description}
         </p>
       </motion.div>
@@ -104,14 +104,14 @@ export default function Experience() {
   )
 
   return (
-    <div className="mt-32">
-        <h2 className="font-bold text-8xl mb-16 w-full text-center">Experience</h2>
-        <div ref={ref} className="w-[75%] mx-auto relative">
+    <div className="mt-32 md:mt-24">
+        <h2 className="font-bold text-8xl mb-16 w-full text-center md:text-6xl sm:text-4xl">Experience</h2>
+        <div ref={ref} className="w-[75%] mx-auto relative lg:w-[95%] md:w-full">
           <motion.div 
-              className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
+              className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top md:w-[2px] md:left-30px xs:left-[20px]"
               style={{ scaleY: scrollYProgress }}
           />
-          <ul className="w-full flex flex-col items-start justify-between ml-4">
+          <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             {
               ExperienceData.map((item, index) => {
                 return (
