@@ -15,7 +15,7 @@ export default function NavBar () {
     setIsOpen(!isOpen)
   }
   return (
-    <header className='w-full px-20 py-4 font-medium flex items-center justify-between bg-light relative'>
+    <header className='w-full px-20 py-4 font-medium flex items-center justify-between bg-light relative lg:px16 md:px-12 sm:px-8'>
       <button onClick={handleClick} className="flex-col justify-center items-center hidden lg:flex">
         <span className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5 '}`}></span>
         <span className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? 'opacity-0' : 'opacity-100'}`}></span>
