@@ -23,7 +23,7 @@ export default function Home() {
               </p>
               <div className="w-full flex items-center lg:justify-center md:flex-col md:justify-center md:mt-6">
                 <div className="flex items-center self-start md:self-center">
-                  <Link href="/dummy.pdf"target={"_blank"} 
+                  <Link href="/CV_2023_Carlos_Corchado.pdf"target={"_blank"} 
                         className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold
                       border-2 border-solid border-transparent hover:bg-light hover:text-dark hover:border-dark md:p-2 md:px-4 md:text-base"
                       download={true}
