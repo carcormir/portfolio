@@ -3,8 +3,8 @@ import Layout from './Layout';
 
 export default function Footer() {
   return (
-    <footer  className='w-full border-t-2 border-solid border-dark bg-dark'>
-      <Layout className='py-8 flex items-center justify-between'>
+    <footer  className='w-full border-t-2 border-solid border-dark bg-dark sm:text-base'>
+      <Layout className='py-8 flex items-center justify-between lg:flex-col lg:py-6'>
         <span>{new Date().getFullYear()} &copy; All Rights Reserved</span>
         <div className='flex items-center'>
           Built with <span className='text-pink-500 px-1'>❤</span> by&nbsp;
