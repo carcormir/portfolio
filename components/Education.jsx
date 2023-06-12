@@ -13,7 +13,7 @@ const EducationData = [
     description: ""
   },
   {
-    title: `Bachelor"s degree in Industrial Technology Engineering`,
+    title: `Bachelor's degree in Industrial Technology Engineering`,
     university: "Universidad de Sevilla",
     universityLink: "https://www.etsi.us.es",
     date: "2010 - 2015",
