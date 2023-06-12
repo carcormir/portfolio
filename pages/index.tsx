@@ -6,11 +6,16 @@ import Layout from "@/components/Layout"
 import AnimatedText from "@/components/AnimatedText"
 import TransitionEffect from "@/components/TransitionEffect"
 import profilePic from "@/public/images/profile/developer-pic-1.png"
+import Head from "next/head"
 
 export default function Home() {
   return (
     <>
       <TransitionEffect />
+      <Head>
+        <title>Home</title>
+        <meta name="home page" content="Home"/>
+      </Head>
       <main className="flex items-center text-dark w-full min-h-screen ">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex items-center justify-between w-full lg:flex-col">
