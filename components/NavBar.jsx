@@ -38,8 +38,8 @@ export default function NavBar () {
               <motion.div className="min-w-full min-h-screen flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10
               bg-dark/90 text-light/75 backdrop-blur-md py-32"
               initial={{opacity: 0, x: "-200%", y: "-50%"}}
-              animate={{ opacity: 1, x: "-50%", transition: { duration: 0.3, ease: "easeInOut" } }}
-              exit={{ opacity: 0, x: "-200%", transition: { duration: 0.3, ease: "easeInOut" } }}
+              animate={{ opacity: 1, x: "-50%", transition: { duration: 0.1, ease: "easeInOut" } }}
+              exit={{ opacity: 0, x: "-200%", transition: { duration: 0.1, ease: "easeInOut" } }}
               >
                 <nav className="flex flex-col items-center justify-between">
                   <CustomMobileNavLink href="/" title="Home" className="font-semibold" toggle={handleClick}/>
