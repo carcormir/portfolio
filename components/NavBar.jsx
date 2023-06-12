@@ -2,10 +2,9 @@ import Link from "next/link";
 import Logo from "@/components/Logo"
 import CustomNavLink from "@/components/CustomNavLink"
 import CustomMobileNavLink from "@/components/CustomMobileNavLink"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
 import NavBarSocial from "./NavBarSocial";
-
 
 
 export default function NavBar () {
@@ -16,10 +15,10 @@ export default function NavBar () {
   }
   return (
     <header className="w-full px-20 py-4 font-medium flex items-center justify-between bg-light relative lg:px16 md:px-12 sm:px-8">
-      <button onClick={handleClick} className="flex-col justify-center items-center hidden lg:flex">
-        <span className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}></span>
-        <span className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"}`}></span>
-        <span className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"}`}></span>
+      <button onClick={handleClick} className="flex-col justify-center items-center hidden lg:flex z-20">
+        <span className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "rotate-45 translate-y-1 bg-light/75" : "-translate-y-0.5"}`}></span>
+        <span className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? "opacity-0 bg-light/75" : "opacity-100"}`}></span>
+        <span className={`bg-dark block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${isOpen ? "-rotate-45 -translate-y-1 bg-light/75" : "translate-y-0.5"}`}></span>
       </button>
       <div className="mr-3">
         <Logo />
@@ -33,23 +32,27 @@ export default function NavBar () {
       </div>
 
       {
-        isOpen && (
-          <motion.div className="min-w-[70vw] flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30
-          bg-dark/90 text-light/75 rounded-lg backdrop-blur-md py-32"
-          initial={{scale: 0, opacity: 0, x: "-50%", y: "-50%"}}
-          animate={{scale: 1, opacity: 1, transition: {duration: 0.3}}}
-          >
-            <nav className="flex flex-col items-center justify-between">
-              <CustomMobileNavLink href="/" title="Home" className="font-semibold" toggle={handleClick}/>
-              <CustomMobileNavLink href="/about" title="About" className="font-semibold" toggle={handleClick}/>
-              <CustomMobileNavLink href="/projects" title="Projects" className="font-semibold" toggle={handleClick}/>
-            </nav>
-
-            <NavBarSocial classNameGit={"ml-2 mt-4"} classNameLinkedin={"mt-4 mx-2"}/>
-          </motion.div>
-        )
-      }
-      
+        <AnimatePresence>
+          {
+            isOpen && (
+              <motion.div className="min-w-full min-h-screen flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10
+              bg-dark/90 text-light/75 backdrop-blur-md py-32"
+              initial={{opacity: 0, x: "-200%", y: "-50%"}}
+              animate={{ opacity: 1, x: "-50%", transition: { duration: 0.3, ease: "easeInOut" } }}
+              exit={{ opacity: 0, x: "-200%", transition: { duration: 0.3, ease: "easeInOut" } }}
+              >
+                <nav className="flex flex-col items-center justify-between">
+                  <CustomMobileNavLink href="/" title="Home" className="font-semibold" toggle={handleClick}/>
+                  <CustomMobileNavLink href="/about" title="About" className="font-semibold" toggle={handleClick}/>
+                  <CustomMobileNavLink href="/projects" title="Projects" className="font-semibold" toggle={handleClick}/>
+                </nav>
+    
+                <NavBarSocial classNameGit={"ml-2 mt-4"} classNameLinkedin={"mt-4 mx-2"}/>
+              </motion.div>
+            )
+          }
+        </AnimatePresence>
+      }      
     </header>
   )
 }

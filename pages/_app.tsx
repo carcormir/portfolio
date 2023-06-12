@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon"href="/favicon.ico"/>
       </Head>
       <main className={`${montserrat.className} font-mont bg-light w-full min-h-screen`}>
-        <NavBar/>
+        <NavBar />
         <AnimatePresence mode="wait">
           <Component key={router.asPath} {...pageProps} />
         </AnimatePresence>
