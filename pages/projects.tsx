@@ -1,6 +1,7 @@
 import AnimatedText from "@/components/AnimatedText"
 import Layout from "@/components/Layout"
 import TransitionEffect from "@/components/TransitionEffect"
+import Clock from "@/components/Clock"
 import Skills from "@/components/Skills"
 import Experience from "@/components/Experience"
 import Education from "@/components/Education"
@@ -55,6 +56,8 @@ export default function About() {
               👷🏻‍♂️This section is currently under construction. To check some of the public
               projects I&apos;ve worked on and I&apos;m working on, please visit my 
               <a href="https://github.com/carcormir" target="_blank" className="font-bold hover:underline"> GitHub account</a>.
+              <Clock />
+
             </main>
         </Layout>
       </main>
