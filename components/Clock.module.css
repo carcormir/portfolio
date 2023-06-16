@@ -2,14 +2,14 @@
   border-radius: 50%;
   background: #fff;
   background-size: 88%;
-  height: 20em;
-  padding-bottom: 31%;
+  height: 60vw;
+  width: 60vw;
   position: relative;
-  width: 20em;
+  margin-top: 10px;
 }
 
 .clock.simple:after {
-  background: #000;
+  background: black;
   border-radius: 50%;
   content: "";
   position: absolute;
