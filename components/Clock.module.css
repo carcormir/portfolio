@@ -62,21 +62,3 @@
   width: 1%;
   z-index: 8;
 }
-
-@keyframes rotate {
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-
-.hoursContainer {
-  animation: rotate 43200s infinite linear;
-}
-
-.minutesContainer {
-  animation: rotate 3600s infinite linear;
-}
-
-.secondsContainer {
-  animation: rotate 60s infinite linear;
-}
